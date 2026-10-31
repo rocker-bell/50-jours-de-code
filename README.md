@@ -1,6 +1,6 @@
-Exercices de programmation – [C++]
-Présentation
+# Exercices de programmation – [C++]
 
+# Présentation
 Cette branche est consacrée à la pratique et à l'apprentissage du langage [C++], dans le cadre du défi des 50 jours de programmation.
 
 Elle regroupe des exercices quotidiens, des défis algorithmiques et des projets pratiques permettant de développer progressivement ses compétences dans ce langage.
