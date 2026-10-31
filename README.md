@@ -1,7 +1,7 @@
-Exercices de programmation – [JAVASCRIPT]
+Exercices de programmation – [C++]
 Présentation
 
-Cette branche est consacrée à la pratique et à l'apprentissage du langage [JAVASCRIPT], dans le cadre du défi des 50 jours de programmation.
+Cette branche est consacrée à la pratique et à l'apprentissage du langage [C++], dans le cadre du défi des 50 jours de programmation.
 
 Elle regroupe des exercices quotidiens, des défis algorithmiques et des projets pratiques permettant de développer progressivement ses compétences dans ce langage.
 
@@ -13,7 +13,7 @@ Elle regroupe des exercices quotidiens, des défis algorithmiques et des projets
     - Petits projets pratiques.
     - Expérimentations et apprentissage de nouvelles fonctionnalités.
 ## Objectifs
-    - Maîtriser progressivement les bases de [JAVASCRIPT].
+    - Maîtriser progressivement les bases de [C++].
     - Améliorer la logique et la résolution de problèmes.
     - Pratiquer à travers des exercices réguliers.
     - Découvrir les fonctionnalités et les bonnes pratiques du langage.
@@ -41,4 +41,4 @@ Toute utilisation, reproduction, modification ou distribution non autorisée est
 
 ## Remarque
 
-> Cette branche est dédiée exclusivement au langage [JAVASCRIPT]. Pour découvrir les exercices réalisés dans d'autres langages, consultez les autres branches du dépôt principal.
+> Cette branche est dédiée exclusivement au langage [C++]. Pour découvrir les exercices réalisés dans d'autres langages, consultez les autres branches du dépôt principal.
