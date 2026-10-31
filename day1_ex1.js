@@ -13,8 +13,8 @@ const list_number = Array.from(number);
 // Saisie utilisateur
 console.log("Entrer un nombre :");
 
-let input_number = Number(fs.readFileSync(0, "utf-8").trim());
-
+let input_number = Number(fs.readFileSync(0, "utf-8").trim()); 
+// enter + (ctl  z)
 // Conversion des types
 let float_input = Number(input_number);
 let string_number = String(input_number);
@@ -29,7 +29,7 @@ if (number.includes(input_number)) {
     );
 } else {
     console.log(
-        `Nombre non existant dans la liste : ${list_number}`
+        `Nombre ${input_number} non existant dans la liste : ${list_number}`
     );
 }
 
