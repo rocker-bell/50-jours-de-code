@@ -1,5 +1,6 @@
-Exercices de programmation – [PYTHON]
-Présentation
+# Exercices de programmation – [PYTHON]
+
+## Présentation
 
 Cette branche est consacrée à la pratique et à l'apprentissage du langage [PYTHON], dans le cadre du défi des 50 jours de programmation.
 
