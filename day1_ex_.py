@@ -13,7 +13,7 @@ input_number = int(input("entrer un nombre =  "));
 
 float_input = float(input_number);
 string_number = str(input_number);
-square_input_number = input_number**0,5
+square_input_number = input_number**0.5
 
 #utilisation conditionnelle
 if input_number in number:

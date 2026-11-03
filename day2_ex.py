@@ -7,7 +7,7 @@ input_number = int(input('entrer un nombre valide = '));
 list_number = list(startup_numbers);
 float_input = float(input_number);
 string_number = str(input_number);
-square_input_number = input_number**0,5;
+square_input_number = input_number**0.5;
 
 # verification d'existence dans la liste startup
 
@@ -23,8 +23,8 @@ def existence_verification(input_number):
 
 # verification du type
 
-def verification_type():
-    print("\n--- VERIFICATION DES TYPES ---")
+def interlopation_type():
+    print("\n--- Interlopation DES TYPES ---")
 
     print(f"Type du tuple : {type(startup_numbers)}")
     print(f"Type de la liste : {type(list_number)}")
