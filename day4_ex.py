@@ -46,6 +46,18 @@ etudiants_dict = [
     {"id": 4, "nom": "Amine", "age": 23, "moyenne_generale": 11.4}
 ]
 
+def etudiants_dict_loop(etudiants_dict):
+    for dict in etudiants_dict:
+        for key, value in dict.items():
+            if key == "id" and value == 1:
+                print (f"dictionaire : {dict}")
+            else:
+                print(f"key : {key} and value : {value} doesnt exist ")
+        print(f"dict {dict}, index : {etudiants_dict.index(dict)}")
+
+etudiants_dict_loop(etudiants_dict);
+
+
 
 # Liste de listes
 etudiants_listes = [
