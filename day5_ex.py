@@ -43,10 +43,21 @@ def data_type_validation(etudiants_listes):
     etudiants_name = etudiants_name.strip().capitalize()
 
     # 5. Search and remove
-    if etudiants_name in etudiants_listes:
-        etudiants_listes.remove(etudiants_name)
-        print(f"{etudiants_name} supprimé.")
-    else:
+    found = False
+
+    for etudiants in etudiants_listes:
+        for name in etudiants:
+
+            if name == etudiants_name:
+                etudiants_listes.remove(etudiants)
+                print(f"{etudiants} supprimé.")
+                found = True
+                break
+
+        if found:
+            break
+
+    if not found:
         print(f"{etudiants_name} introuvable dans la liste.")
 
     # 6. Sorting
