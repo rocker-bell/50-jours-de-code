@@ -186,6 +186,70 @@ tuple_methods(etudiants_tuple)
 
 print(etudiants_dict)
 
+def dictionary_methods(etudiants_dict):
+
+    # 1. KEYS()
+    print("\n--- KEYS ---")
+    for etudiant in etudiants_dict:
+        print(etudiant.keys())
+
+    # 2. VALUES()
+    print("\n--- VALUES ---")
+    for etudiant in etudiants_dict:
+        print(etudiant.values())
+
+    # 3. ITEMS()
+    print("\n--- ITEMS ---")
+    for etudiant in etudiants_dict:
+        for key, value in etudiant.items():
+            print(f"{key} : {value}")
+
+    # 4. GET()
+    print("\n--- GET ---")
+    for etudiant in etudiants_dict:
+        print(etudiant.get("nom"))
+        print(etudiant.get("ville", "Inconnue"))
+
+    # 5. UPDATE()
+    print("\n--- UPDATE ---")
+    etudiants_dict[0].update({
+        "age": 21,
+        "ville": "Rabat"
+    })
+    print(etudiants_dict[0])
+
+    # 6. POP()
+    print("\n--- POP ---")
+    removed_value = etudiants_dict[1].pop("age")
+    print("Valeur supprimée :", removed_value)
+    print(etudiants_dict[1])
+
+    # 7. CLEAR()
+    print("\n--- CLEAR ---")
+    temporary_dict = etudiants_dict[0].copy()
+    temporary_dict.clear()
+    print("Dictionnaire vidé :", temporary_dict)
+
+    # 8. COPY()
+    print("\n--- COPY ---")
+    etudiant_copy = etudiants_dict[2].copy()
+    print("Original :", etudiants_dict[2])
+    print("Copie :", etudiant_copy)
+
+    # 9. SETDEFAULT()
+    print("\n--- SETDEFAULT ---")
+    etudiants_dict[3].setdefault("ville", "Casablanca")
+    print(etudiants_dict[3])
+
+    # Final output
+    print("\n--- FINAL LIST ---")
+    for etudiant in etudiants_dict:
+        print(etudiant)
+
+
+# Function execution
+dictionary_methods(etudiants_dict)
+
 
 print(competences)
 
