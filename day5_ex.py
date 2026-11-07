@@ -73,6 +73,116 @@ data_type_validation(etudiants_listes)
 
 print(etudiants_tuple)
 
+def tuple_methods(etudiants_tuple):
+
+    # 1. DATA OUTPUT
+    print("\n--- DATA OUTPUT ---")
+    print("Tuple :", etudiants_tuple)
+    print("Length :", len(etudiants_tuple))
+    print("Type :", type(etudiants_tuple))
+    print("Min :", min(etudiants_tuple))
+    print("Max :", max(etudiants_tuple))
+
+    # 2. COUNT()
+    print("\n--- COUNT ---")
+    print("Occurrences of Amina :",
+          etudiants_tuple.count((1, "Amina", 20, 15.5)))
+
+    # 3. INDEX()
+    print("\n--- INDEX ---")
+    print("Index of Sofia :",
+          etudiants_tuple.index((3, "Sofia", 21, 16.2)))
+
+    # 4. LOOP
+    print("\n--- LOOP ---")
+    for etudiant in etudiants_tuple:
+        print(etudiant)
+
+    # 5. ENUMERATE()
+    print("\n--- ENUMERATE ---")
+    for index, etudiant in enumerate(etudiants_tuple, start=1):
+        print(f"Index : {index}, Student : {etudiant}")
+
+    # 6. SLICING
+    print("\n--- SLICING ---")
+    print("First student :", etudiants_tuple[0])
+    print("Last student :", etudiants_tuple[-1])
+    print("First two :", etudiants_tuple[:2])
+    print("Reverse :", etudiants_tuple[::-1])
+
+    # 7. IN / NOT IN
+    print("\n--- IN / NOT IN ---")
+    print("Amina exists :",
+          any("Amina" in e for e in etudiants_tuple))
+
+    print("Mehdi absent :",
+          not any("Mehdi" in e for e in etudiants_tuple))
+
+    # 8. MAP()
+    print("\n--- MAP ---")
+    noms = tuple(map(lambda e: e[1], etudiants_tuple))
+    print("Students names :", noms)
+
+    # 9. FILTER()
+    print("\n--- FILTER ---")
+    meilleurs = tuple(filter(
+        lambda e: e[3] >= 15,
+        etudiants_tuple
+    ))
+    print("Students with average >= 15 :", meilleurs)
+
+    # 10. ZIP()
+    print("\n--- ZIP ---")
+    ids = (1, 2, 3, 4)
+    noms = ("Amina", "Youssef", "Sofia", "Amine")
+
+    print(tuple(zip(ids, noms)))
+
+    # 11. ANY() / ALL()
+    print("\n--- ANY / ALL ---")
+    print("Any average >= 16 :",
+          any(e[3] >= 16 for e in etudiants_tuple))
+
+    print("All students >= 10 :",
+          all(e[3] >= 10 for e in etudiants_tuple))
+
+    # 12. SORTED()
+    print("\n--- SORTED ---")
+    print("Sorted by average :",
+          sorted(etudiants_tuple, key=lambda e: e[3]))
+
+    print("Sorted descending :",
+          sorted(etudiants_tuple,
+                 key=lambda e: e[3],
+                 reverse=True))
+
+    # 13. TYPE VALIDATION
+    print("\n--- ISINSTANCE ---")
+    print(isinstance(etudiants_tuple, tuple))
+
+    # 14. CONCATENATION
+    print("\n--- CONCATENATION ---")
+    new_student = (5, "Mehdi", 23, 14.5)
+    new_tuple = etudiants_tuple + (new_student,)
+    print(new_tuple)
+
+    # 15. REPETITION
+    print("\n--- REPETITION ---")
+    print((1, 2) * 3)
+
+    # 16. CONVERSION
+    print("\n--- CONVERSION ---")
+    print("Tuple to list :", list(etudiants_tuple))
+    print("List to tuple :", tuple([1, 2, 3]))
+
+    # 17. NESTED LOOP
+    print("\n--- NESTED LOOP ---")
+    for etudiant in etudiants_tuple:
+        for element in etudiant:
+            print(element, end=" | ")
+        print()
+
+tuple_methods(etudiants_tuple)
 
 print(etudiants_dict)
 
