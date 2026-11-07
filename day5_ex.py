@@ -68,7 +68,7 @@ def data_type_validation(etudiants_listes):
 
     print("Liste finale :", etudiants_listes)
 
-
+data_type_validation(etudiants_listes);
 
 
 print(etudiants_tuple)
@@ -348,6 +348,108 @@ set_methods(competences)
 
 print(registre_etudiants)
 
+
+def nested_dictionary_methods(registre_etudiants):
+
+    # 1. DATA OUTPUT
+    print("\n--- DATA OUTPUT ---")
+    print(registre_etudiants)
+    print("Type :", type(registre_etudiants))
+    print("Length :", len(registre_etudiants))
+
+    # 2. KEYS()
+    print("\n--- KEYS ---")
+    print(registre_etudiants.keys())
+
+    # 3. VALUES()
+    print("\n--- VALUES ---")
+    print(registre_etudiants.values())
+
+    # 4. ITEMS()
+    print("\n--- ITEMS ---")
+    for student_id, student_info in registre_etudiants.items():
+        print(student_id, student_info)
+
+    # 5. GET()
+    print("\n--- GET ---")
+    print(registre_etudiants.get("ETUD-001"))
+    print(registre_etudiants.get("ETUD-999", "Not found"))
+
+    # 6. ACCESS NESTED VALUE
+    print("\n--- NESTED ACCESS ---")
+    print(registre_etudiants["ETUD-001"].get("nom"))
+
+    # 7. UPDATE()
+    print("\n--- UPDATE ---")
+    registre_etudiants["ETUD-001"].update({
+        "classe": "B",
+        "age": 20
+    })
+    print(registre_etudiants["ETUD-001"])
+
+    # 8. SETDEFAULT()
+    print("\n--- SETDEFAULT ---")
+    registre_etudiants["ETUD-002"].setdefault("ville", "Rabat")
+    print(registre_etudiants["ETUD-002"])
+
+    # 9. POP()
+    print("\n--- POP ---")
+    temporary = registre_etudiants.copy()
+    removed = temporary.pop("ETUD-003")
+    print("Removed :", removed)
+
+    # 10. COPY()
+    print("\n--- COPY ---")
+    registre_copy = registre_etudiants.copy()
+    print(registre_copy)
+
+    # 11. ENUMERATE()
+    print("\n--- ENUMERATE ---")
+    for index, (student_id, info) in enumerate(
+        registre_etudiants.items(), start=1
+    ):
+        print(index, student_id, info["nom"])
+
+    # 12. FILTER()
+    print("\n--- FILTER ---")
+    students_A = dict(filter(
+        lambda item: item[1]["classe"] == "A",
+        registre_etudiants.items()
+    ))
+    print(students_A)
+
+    # 13. MAP()
+    print("\n--- MAP ---")
+    names = list(map(
+        lambda item: item[1]["nom"],
+        registre_etudiants.items()
+    ))
+    print(names)
+
+    # 14. ANY() / ALL()
+    print("\n--- ANY / ALL ---")
+    print(any(
+        info["classe"] == "A"
+        for info in registre_etudiants.values()
+    ))
+
+    print(all(
+        "nom" in info
+        for info in registre_etudiants.values()
+    ))
+
+    # 15. IN / NOT IN
+    print("\n--- IN / NOT IN ---")
+    print("ETUD-001" in registre_etudiants)
+    print("ETUD-999" not in registre_etudiants)
+
+    # 16. CLEAR()
+    print("\n--- CLEAR ---")
+    temporary.clear()
+    print(temporary)
+
+
+nested_dictionary_methods(registre_etudiants)
 
 
 print(Etudiant)
