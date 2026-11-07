@@ -69,7 +69,7 @@ def data_type_validation(etudiants_listes):
     print("Liste finale :", etudiants_listes)
 
 
-data_type_validation(etudiants_listes)
+
 
 print(etudiants_tuple)
 
@@ -247,13 +247,107 @@ def dictionary_methods(etudiants_dict):
         print(etudiant)
 
 
-# Function execution
-dictionary_methods(etudiants_dict)
-
-
 print(competences)
 
 
+def set_methods(competences):
+
+    # 1. DATA OUTPUT
+    print("\n--- DATA OUTPUT ---")
+    print("Set :", competences)
+    print("Type :", type(competences))
+    print("Length :", len(competences))
+
+    # 2. ADD()
+    print("\n--- ADD ---")
+    competences.add("Java")
+    print(competences)
+
+    # 3. UPDATE()
+    print("\n--- UPDATE ---")
+    competences.update(["HTML", "CSS", "JavaScript"])
+    print(competences)
+
+    # 4. REMOVE()
+    print("\n--- REMOVE ---")
+    competences.remove("Git")
+    print(competences)
+
+    # 5. DISCARD()
+    print("\n--- DISCARD ---")
+    competences.discard("PHP")
+    print(competences)
+
+    # 6. POP()
+    print("\n--- POP ---")
+    removed = competences.pop()
+    print("Removed :", removed)
+
+    # 7. COPY()
+    print("\n--- COPY ---")
+    competences_copy = competences.copy()
+    print(competences_copy)
+
+    # 8. UNION()
+    print("\n--- UNION ---")
+    autres = {"Java", "PHP", "SQL"}
+    print(competences.union(autres))
+
+    # 9. INTERSECTION()
+    print("\n--- INTERSECTION ---")
+    print(competences.intersection(autres))
+
+    # 10. DIFFERENCE()
+    print("\n--- DIFFERENCE ---")
+    print(competences.difference(autres))
+
+    # 11. SYMMETRIC DIFFERENCE()
+    print("\n--- SYMMETRIC DIFFERENCE ---")
+    print(competences.symmetric_difference(autres))
+
+    # 12. ISSUBSET()
+    print("\n--- ISSUBSET ---")
+    print({"Python", "SQL"}.issubset(competences))
+
+    # 13. ISSUPERSET()
+    print("\n--- ISSUPERSET ---")
+    print(competences.issuperset({"Python"}))
+
+    # 14. ISDISJOINT()
+    print("\n--- ISDISJOINT ---")
+    print(competences.isdisjoint({"Ruby", "PHP"}))
+
+    # 15. IN / NOT IN
+    print("\n--- IN / NOT IN ---")
+    print("Python" in competences)
+    print("PHP" not in competences)
+
+    # 16. LOOP / ENUMERATE
+    print("\n--- LOOP ---")
+    for index, competence in enumerate(competences, start=1):
+        print(index, competence)
+
+    # 17. FILTER()
+    print("\n--- FILTER ---")
+    python_competences = set(filter(
+        lambda x: "P" in x,
+        competences
+    ))
+    print(python_competences)
+
+    # 18. CLEAR()
+    print("\n--- CLEAR ---")
+    temporary_set = competences.copy()
+    temporary_set.clear()
+    print(temporary_set)
+
+
+set_methods(competences)
+
+
+
 print(registre_etudiants)
+
+
 
 print(Etudiant)
