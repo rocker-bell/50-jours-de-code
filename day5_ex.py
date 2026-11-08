@@ -1,15 +1,8 @@
-import csv, json
-
-from day4_ex import etudiants_dict
-
 from day4_ex import etudiants_listes
-
 from day4_ex import etudiants_tuple
-
+from day4_ex import etudiants_dict
 from day4_ex import competences
-
 from day4_ex import registre_etudiants
-
 from day4_ex import Etudiant
 
 
@@ -452,4 +445,94 @@ def nested_dictionary_methods(registre_etudiants):
 nested_dictionary_methods(registre_etudiants)
 
 
+
 print(Etudiant)
+
+def namedtuple_methods(etudiants):
+
+    # 1. DATA OUTPUT
+    print("\n--- DATA OUTPUT ---")
+    print(etudiants)
+    print(type(etudiants[0]))
+
+    # 2. ACCESS BY NAME
+    print("\n--- ACCESS BY NAME ---")
+    print(etudiants[0].nom)
+    print(etudiants[0].moyenne)
+
+    # 3. ACCESS BY INDEX
+    print("\n--- ACCESS BY INDEX ---")
+    print(etudiants[0][0])
+    print(etudiants[0][1])
+
+    # 4. _FIELDS
+    print("\n--- _FIELDS ---")
+    print(Etudiant._fields)
+
+    # 5. _ASDICT()
+    print("\n--- _ASDICT ---")
+    print(etudiants[0]._asdict())
+
+    # 6. _REPLACE()
+    print("\n--- _REPLACE ---")
+    updated = etudiants[0]._replace(moyenne=18)
+    print(updated)
+
+    # 7. _MAKE()
+    print("\n--- _MAKE ---")
+    new_student = Etudiant._make((5, "Mehdi", 14.5))
+    print(new_student)
+
+    # 8. COUNT()
+    print("\n--- COUNT ---")
+    print(etudiants[0].count("Amina"))
+
+    # 9. INDEX()
+    print("\n--- INDEX ---")
+    print(etudiants[0].index("Amina"))
+
+    # 10. ENUMERATE()
+    print("\n--- ENUMERATE ---")
+    for index, etudiant in enumerate(etudiants, start=1):
+        print(index, etudiant.nom, etudiant.moyenne)
+
+    # 11. MAP()
+    print("\n--- MAP ---")
+    names = list(map(lambda e: e.nom, etudiants))
+    print(names)
+
+    # 12. FILTER()
+    print("\n--- FILTER ---")
+    meilleurs = list(filter(
+        lambda e: e.moyenne >= 15,
+        etudiants
+    ))
+    print(meilleurs)
+
+    # 13. MAX()
+    print("\n--- MAX ---")
+    best = max(etudiants, key=lambda e: e.moyenne)
+    print(best)
+
+    # 14. SORTED()
+    print("\n--- SORTED ---")
+    classement = sorted(
+        etudiants,
+        key=lambda e: e.moyenne,
+        reverse=True
+    )
+    print(classement)
+
+    # 15. ISINSTANCE()
+    print("\n--- ISINSTANCE ---")
+    print(isinstance(etudiants[0], Etudiant))
+    print(isinstance(etudiants[0], tuple))
+
+    # 16. ZIP()
+    print("\n--- ZIP ---")
+    ids = list(map(lambda e: e.id, etudiants))
+    noms = list(map(lambda e: e.nom, etudiants))
+    print(list(zip(ids, noms)))
+
+
+namedtuple_methods(etudiants)
