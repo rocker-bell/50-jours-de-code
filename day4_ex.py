@@ -110,6 +110,14 @@ Etudiant = namedtuple('Etudiant', ['id', 'nom', 'moyenne'])
 # On crée une instance
 etudiant_1 = Etudiant(id=10, nom="Amine", moyenne=14.5)
 
+# named tuple list
+
+etudiants = [
+    Etudiant(1, "Amina", 15.5),
+    Etudiant(2, "Youssef", 13.8),
+    Etudiant(3, "Sofia", 16.2)
+]
+
 # Accès très propre aux données
 print(etudiant_1.nom)      # Sortie : Amine
 print(etudiant_1.moyenne)  # Sortie : 14.5

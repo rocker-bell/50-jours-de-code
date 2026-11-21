@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "nom": "Amina",
+        "age": 20,
+        "moyenne_generale": 15.5
+    },
+    {
+        "id": 2,
+        "nom": "Youssef",
+        "age": 22,
+        "moyenne_generale": 13.8
+    },
+    {
+        "id": 3,
+        "nom": "Sofia",
+        "age": 21,
+        "moyenne_generale": 16.2
+    },
+    {
+        "id": 4,
+        "nom": "Amine",
+        "age": 23,
+        "moyenne_generale": 11.4
+    }
+]
