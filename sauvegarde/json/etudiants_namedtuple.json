@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "nom": "Amina",
+        "moyenne": 15.5
+    },
+    {
+        "id": 2,
+        "nom": "Youssef",
+        "moyenne": 13.8
+    },
+    {
+        "id": 3,
+        "nom": "Sofia",
+        "moyenne": 16.2
+    }
+]
