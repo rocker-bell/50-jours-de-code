@@ -36,6 +36,7 @@ void list_csv() {
     file << "id,nom,age,moyenne\n";
 
     for (int i = 0; i < 4; i++) {
+
         file << etudiants_listes[i][0] << ","
              << etudiants_dict[i].nom << ","
              << etudiants_listes[i][1] << ","
@@ -67,6 +68,8 @@ void list_json() {
     ofstream file("sauvegarde/json/etudiants_listes.json");
 
     file << data.dump(4);
+
+    file.close();
 }
 
 
@@ -83,7 +86,9 @@ void tuple_csv() {
     file << etudiant_tuple.id << ","
          << etudiant_tuple.nom << ","
          << etudiant_tuple.age << ","
-         << etudiant_tuple.moyenne << "\n";
+         << etudiant_tuple.moyenne_generale << "\n";
+
+    file.close();
 }
 
 
@@ -97,12 +102,14 @@ void tuple_json() {
         {"id", etudiant_tuple.id},
         {"nom", etudiant_tuple.nom},
         {"age", etudiant_tuple.age},
-        {"moyenne", etudiant_tuple.moyenne}
+        {"moyenne", etudiant_tuple.moyenne_generale}
     };
 
     ofstream file("sauvegarde/json/etudiants_tuple.json");
 
     file << data.dump(4);
+
+    file.close();
 }
 
 
@@ -121,8 +128,10 @@ void dict_csv() {
         file << e.id << ","
              << e.nom << ","
              << e.age << ","
-             << e.moyenne << "\n";
+             << e.moyenne_generale << "\n";
     }
+
+    file.close();
 }
 
 
@@ -140,13 +149,15 @@ void dict_json() {
             {"id", e.id},
             {"nom", e.nom},
             {"age", e.age},
-            {"moyenne", e.moyenne}
+            {"moyenne", e.moyenne_generale}
         });
     }
 
     ofstream file("sauvegarde/json/etudiants_dict.json");
 
     file << data.dump(4);
+
+    file.close();
 }
 
 
@@ -160,7 +171,6 @@ void set_csv() {
 
     file << "competence\n";
 
-    // Tri alphabetique
     string temp[4];
 
     copy(competences, competences + 4, temp);
@@ -168,8 +178,11 @@ void set_csv() {
     sort(temp, temp + 4);
 
     for (const auto& c : temp) {
+
         file << c << "\n";
     }
+
+    file.close();
 }
 
 
@@ -188,12 +201,15 @@ void set_json() {
     json data = json::array();
 
     for (const auto& c : temp) {
+
         data.push_back(c);
     }
 
     ofstream file("sauvegarde/json/competences.json");
 
     file << data.dump(4);
+
+    file.close();
 }
 
 
@@ -209,10 +225,12 @@ void nested_dict_csv() {
 
     for (const auto& r : registre) {
 
-        file << r.id << ","
+        file << r.code << ","
              << r.nom << ","
              << r.classe << "\n";
     }
+
+    file.close();
 }
 
 
@@ -227,7 +245,7 @@ void nested_dict_json() {
     for (const auto& r : registre) {
 
         data.push_back({
-            {"id", r.id},
+            {"id", r.code},
             {"nom", r.nom},
             {"classe", string(1, r.classe)}
         });
@@ -236,6 +254,8 @@ void nested_dict_json() {
     ofstream file("sauvegarde/json/registre_etudiants.json");
 
     file << data.dump(4);
+
+    file.close();
 }
 
 
@@ -252,6 +272,8 @@ void namedtuple_csv() {
     file << etudiant_1.id << ","
          << etudiant_1.nom << ","
          << etudiant_1.moyenne << "\n";
+
+    file.close();
 }
 
 
@@ -270,6 +292,8 @@ void namedtuple_json() {
     ofstream file("sauvegarde/json/etudiants_namedtuple.json");
 
     file << data.dump(4);
+
+    file.close();
 }
 
 

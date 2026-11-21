@@ -1,0 +1,26 @@
+[
+    {
+        "age": 20,
+        "id": 1,
+        "moyenne": 15.5,
+        "nom": "Amina"
+    },
+    {
+        "age": 22,
+        "id": 2,
+        "moyenne": 13.800000190734863,
+        "nom": "Youssef"
+    },
+    {
+        "age": 21,
+        "id": 3,
+        "moyenne": 16.200000762939453,
+        "nom": "Sofia"
+    },
+    {
+        "age": 23,
+        "id": 4,
+        "moyenne": 11.399999618530273,
+        "nom": "Amine"
+    }
+]

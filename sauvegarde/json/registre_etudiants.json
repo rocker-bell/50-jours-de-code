@@ -1,0 +1,17 @@
+[
+    {
+        "classe": "A",
+        "id": "ETUD-001",
+        "nom": "Amina"
+    },
+    {
+        "classe": "B",
+        "id": "ETUD-002",
+        "nom": "Youssef"
+    },
+    {
+        "classe": "A",
+        "id": "ETUD-003",
+        "nom": "Sofia"
+    }
+]
